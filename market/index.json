@@ -1,0 +1,85 @@
+{
+  "format": 1,
+  "title": {
+    "en": "DSH plugins by hippone",
+    "zh": "hippone 的 DSH 插件"
+  },
+  "description": {
+    "en": "Plugins published by hippone for the DeepSeek Harness Web GUI.",
+    "zh": "hippone 发布的 DeepSeek Harness Web GUI 插件。"
+  },
+  "metadata": {
+    "categories": {
+      "theme": {
+        "title": {
+          "en": "Themes",
+          "zh": "主题"
+        }
+      }
+    },
+    "labels": {
+      "ui": {
+        "title": {
+          "en": "Interface",
+          "zh": "界面"
+        }
+      }
+    },
+    "sortKeys": {
+      "github_stars": {
+        "title": {
+          "en": "GitHub stars",
+          "zh": "GitHub Star"
+        },
+        "order": "desc"
+      }
+    }
+  },
+  "plugins": [
+    {
+      "name": "dsh-aurora-background",
+      "title": {
+        "en": "Aurora background",
+        "zh": "极光动态背景"
+      },
+      "description": {
+        "en": "A slowly drifting aurora behind the Web GUI, a translucent glass sidebar and conversation, an opaque composer, and a whale that leaps on the blank home.",
+        "zh": "为 Web 界面铺一层缓慢流动的极光，侧栏与会话呈半透明玻璃质感，输入框保持不透明，空白首页的鲸鱼会偶尔跃出水面。"
+      },
+      "icon": "icons/aurora-background.svg",
+      "author": "Hans Desilva",
+      "homepage": "https://github.com/hippone/dsh-aurora-background#readme",
+      "repository": {
+        "url": "https://github.com/hippone/dsh-aurora-background"
+      },
+      "metadata": {
+        "category": "theme",
+        "keywords": [
+          "dsh",
+          "dsh-plugin",
+          "deepseek-harness",
+          "theme",
+          "background",
+          "aurora"
+        ],
+        "labels": [
+          "ui"
+        ]
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "publishTimestamp": 1795678863,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/hippone/dsh-aurora-background",
+            "commit": "d045cc020583a1499bd855f8bb4f489392274153"
+          },
+          "engines": {
+            "dsh": ">=0.2.0"
+          }
+        }
+      ]
+    }
+  ]
+}

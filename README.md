@@ -41,6 +41,24 @@ ships plain files, and the browser half is loaded from `client.js`.
 Refresh the page after installing (a new client module is read at page load).
 If the settings row does not appear, restart the Desktop app.
 
+## Install from the plugin market
+
+DSH's **Discover** tab installs bundles from *plugin indexes*: format-1 JSON
+documents that anyone can host on a static https host. This repository is both
+the package and its index.
+
+1. Open **Plugins**, switch on **Custom plugin indexes** under experimental
+   plugins, and select **Discover**.
+2. **Add index source** with:
+   `https://raw.githubusercontent.com/hippone/dsh-aurora-background/main/market/index.json`
+3. Install the **Aurora background** entry and confirm its source.
+
+The index pins the Git commit it was generated from, so a published version
+keeps installing the same code. [`market/README.zh.md`](market/README.zh.md)
+documents hosting it elsewhere, regenerating it for a new version
+(`node market/build-index.mjs`), and switching the entry to an npm source after
+`npm publish`.
+
 ## Use
 
 - **Settings → General → Dynamic background** chooses the style or turns the
@@ -77,6 +95,8 @@ If the settings row does not appear, restart the Desktop app.
 | `locale/{zh,en}.json` | Plugin Manager title, description, detail document |
 | `docs/DETAIL*.md`, `docs/preview.svg` | Feature image for the bundle detail page |
 | `icon.svg` | Plugin row icon |
+| `LICENSE` | MIT |
+| `market/` | Plugin index, its icon, the generator, and the publishing guide |
 
 ## Uninstall
 

@@ -69,9 +69,11 @@
       "versions": [
         {
           "version": "1.0.0",
-          "publishTimestamp": 1795682542,
+          "publishTimestamp": 1795678826,
           "source": {
-            "type": "npm"
+            "type": "git",
+            "url": "https://github.com/hippone/dsh-aurora-background",
+            "commit": "d045cc020583a1499bd855f8bb4f489392274153"
           },
           "engines": {
             "dsh": ">=0.2.0"

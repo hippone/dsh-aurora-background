@@ -1,0 +1,51 @@
+{
+  "name": "dsh-aurora-background",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Animated aurora background theme for the DeepSeek Harness Web GUI",
+  "license": "MIT",
+  "author": "Hans Desilva <44400254+hippone@users.noreply.github.com>",
+  "homepage": "https://github.com/hippone/dsh-aurora-background#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hippone/dsh-aurora-background.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hippone/dsh-aurora-background/issues"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "theme",
+    "background",
+    "aurora"
+  ],
+  "engines": {
+    "dsh": ">=0.2.0"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "docs",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": ["@deepseek-ai/dsh-client-ui-theme", "@deepseek-ai/dsh-client-ui-settings"]
+    }
+  }
+}

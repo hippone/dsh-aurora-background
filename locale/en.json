@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Aurora background",
+    "description": "Paints a slowly drifting aurora behind the interface and gives the sidebar and conversation a translucent glass finish while the composer stays opaque. Open Settings → General → Dynamic background to choose Aurora, Nebula, or Sakura, or to stop the motion and turn the background off. The aurora drifts behind the sidebar and the conversation, and the whale on the blank home occasionally leaps out of the water. It follows the light and dark appearance, and the artwork never intercepts clicks.",
+    "detail": "docs/DETAIL.md"
+  }
+}

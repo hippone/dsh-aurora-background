@@ -47,12 +47,25 @@ git commit -am "index: 1.1.0" && git push
 
 ## 走 npm 公共包（同一份索引也能切换）
 
+包名 `dsh-aurora-background` 未被占用，dry-run 正常；但这台机器上 npm 账号（`lihaosong`）**开启了写操作 2FA**，
+`npm publish` 会要一次性验证码，所以要你自己在终端跑（验证码不要发给 agent）。
+
+一键发布（发布 → 索引切到 npm 来源 → 提交推送）：
+
 ```sh
-npm login                       # 当前 npm 登录态已失效，需要重新登录
-npm publish --access public     # 包名未占用：dsh-aurora-background
+sh market/release.sh
+```
+
+等价的手动步骤：
+
+```sh
+npm publish --access public      # 会提示输入 authenticator 的 6 位码
 node market/build-index.mjs --source npm
 git commit -am "index: npm source" && git push
 ```
+
+如果不想每次输码，可以在 npm 账号里建一个 **Granular Access Token**（勾选 *bypass 2FA* / 只给这个包写权限），
+写进 `~/.npmrc` 后 `npm publish` 就不再要验证码。
 
 ## 校验
 
